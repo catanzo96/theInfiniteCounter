@@ -13,8 +13,8 @@ plus.innerHTML += '+';
 minus.classList.add('minus');
 plus.classList.add('plus');
 
-const number = document.createElement('div');
-number.innerHTML += '0';
+let number = document.createElement('div');
+number.innerHTML += 0;
 number.classList.add('number','text-center');
 
 counterPad.append(minus, number, plus);
