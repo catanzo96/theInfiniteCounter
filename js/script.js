@@ -1,22 +1,20 @@
 // HTML elements creation
-const title = document.createElement('h1');
-document.body.append(title);
-title.innerHTML += 'THE INFINITE COUNTER';
+const container = document.createElement('div'), row = document.createElement('div'), counterPad = document.createElement('div');
+document.body.append(container);
+container.append(row);
+row.append(counterPad)
+container.classList.add('page','container-fluid','d-flex','justify-content-center','align-items-center');
+row.classList.add('circle','d-flex','justify-content-center','align-items-center');
+counterPad.classList.add('counter','d-flex','justify-content-center','align-items-center');
 
-const circle = document.createElement('div');
-document.body.append(circle);
-circle.classList.add('circle');
-
-const minus = document.createElement('button');
+const minus = document.createElement('button'), plus = document.createElement('button');
 minus.innerHTML += '-';
+plus.innerHTML += '+';
 minus.classList.add('minus');
+plus.classList.add('plus');
 
 const number = document.createElement('div');
 number.innerHTML += '0';
-number.classList.add('number');
+number.classList.add('number','text-center');
 
-const plus = document.createElement('button');
-plus.innerHTML += '+';
-plus.classList.add('plus');
-
-circle.append(minus, number, plus);
+counterPad.append(minus, number, plus);
