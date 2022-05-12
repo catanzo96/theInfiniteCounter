@@ -9,17 +9,18 @@
 
 body {
   background: linear-gradient(to top, #00A6FF, #FFFFFF);
-}
-
-.page {
   height: 100vh;
 }
 
+.page {
+  height: 100%;
+}
+
 .circle {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   background-color: #FF3434;
-  border-radius: 100px;
+  border-radius: 150px;
 }
 
 .counter {
@@ -31,6 +32,36 @@ body {
 
   .number {
     font-size: 2em;
-    padding: 20px;
+    padding: 40px;
+  }
+}
+
+.pad {
+  position: absolute;
+
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+
+  .restart {
+    position: absolute;
+    transform: translateX(-200px);
+  }
+
+  .addten {
+    position: absolute;
+    transform: translate(-173px, 100px);
+  }
+
+  .addhun {
+    position: absolute;
+    transform: translate(-100px, 173px);
+  }
+
+  .addtho {
+    position: absolute;
+    transform: translateY(200px);
   }
 }
