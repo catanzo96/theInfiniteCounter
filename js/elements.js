@@ -67,3 +67,4 @@ addHunTho.innerHTML += '+ 100K';
 addHunTho.classList.add('add-hun-tho');
 
 buttons.append(minus, plus, reset, addTen, addHun, addTho, addTenTho, addHunTho);
+console.log(parseFloat(getComputedStyle(circle).height))
