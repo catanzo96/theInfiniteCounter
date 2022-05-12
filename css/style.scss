@@ -17,51 +17,55 @@ body {
 }
 
 .circle {
+  position: absolute;
   width: 300px;
   height: 300px;
   background-color: #FF3434;
   border-radius: 150px;
+
+  z-index: -1;
 }
 
-.counter {
-  button {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-  }
 
-  .number {
-    font-size: 2em;
-    padding: 40px;
-  }
-}
-
-.pad {
+.number {
   position: absolute;
+  font-size: 2em;
+  padding: 40px;
+}
+
+.buttons {
 
   button {
+    position: absolute;
     width: 50px;
     height: 50px;
     border-radius: 25px;
   }
 
-  .restart {
-    position: absolute;
+  .minus {
     transform: translateX(-200px);
   }
-
-  .addten {
-    position: absolute;
+  .plus {
+    transform: translateX(200px);
+  }
+  .reset {
+    transform: translate(-250px, 50px);
+    width: 40px;
+    height: 40px;
+  }
+  .add-ten {
     transform: translate(-173px, 100px);
   }
-
-  .addhun {
-    position: absolute;
+  .add-hun {
     transform: translate(-100px, 173px);
   }
-
-  .addtho {
-    position: absolute;
+  .add-tho {
     transform: translateY(200px);
+  }
+  .add-ten-tho {
+    transform: translate(100px, 173px);
+  }
+  .add-hun-tho {
+    transform: translate(173px, 100px);
   }
 }

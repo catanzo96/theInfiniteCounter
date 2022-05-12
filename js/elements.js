@@ -1,37 +1,69 @@
-// HTML elements creation
-const container = document.createElement('div'), row = document.createElement('div'), counterPad = document.createElement('div');
-document.body.append(container);
-container.append(row);
-row.append(counterPad)
+// Creazione elementi:
+// Titolo
+const title = document.createElement('div');
+title.classList.add('container-fluid', 'fixed-top', 'text-center');
+title.innerHTML += '<h1>The Infinite Counter</h1>';
+document.body.append(title);
+
+// Container Bootstrap
+const container = document.createElement('div');
 container.classList.add('page','container-fluid','d-flex','justify-content-center','align-items-center');
-row.classList.add('circle','d-flex','justify-content-center','align-items-center');
-counterPad.classList.add('counter','d-flex','justify-content-center','align-items-center');
+document.body.append(container);
 
-const minus = document.createElement('button'), plus = document.createElement('button');
-minus.innerHTML += '-';
-plus.innerHTML += '+';
-minus.classList.add('minus');
-plus.classList.add('plus');
+// Cerchio
+circle = document.createElement('div');
+circle.classList.add('circle','d-flex','justify-content-center','align-items-center');
+container.append(circle);
 
-let number = document.createElement('div');
+// Numero
+number = document.createElement('div');
 number.innerHTML += '0';
 number.classList.add('number','text-center');
+container.append(number);
 
-counterPad.append(minus, number, plus);
+// Pulsanti:
+buttons = document.createElement('div');
+buttons.classList.add('buttons','d-flex','justify-content-center','align-items-center');
+container.append(buttons);
 
-controlPad = document.createElement('div');
-container.append(controlPad);
-controlPad.classList.add('pad','d-flex','justify-content-center','align-items-center');
+// -
+const minus = document.createElement('button')
+minus.innerHTML += '-';
+minus.classList.add('minus');
 
-const restart = document.createElement('button'), addTen = document.createElement('button'), addHun = document.createElement('button'), addTho = document.createElement('button');
+// +
+const plus = document.createElement('button')
+plus.innerHTML += '+';
+plus.classList.add('plus');
 
-restart.innerHTML += 'Restart';
-restart.classList.add('restart');
+// Reset
+const reset = document.createElement('button')
+reset.innerHTML += 'R';
+reset.classList.add('reset');
+
+// +10
+addTen = document.createElement('button');
 addTen.innerHTML += '+ 10';
-addTen.classList.add('addten');
-addHun.innerHTML += '+ 100';
-addHun.classList.add('addhun');
-addTho.innerHTML += '+ 1000';
-addTho.classList.add('addtho');
+addTen.classList.add('add-ten');
 
-controlPad.append(restart, addTen, addHun, addTho);
+// +100
+addHun = document.createElement('button');
+addHun.innerHTML += '+ 100';
+addHun.classList.add('add-hun');
+
+// +1000
+addTho = document.createElement('button');
+addTho.innerHTML += '+ 1K';
+addTho.classList.add('add-tho');
+
+// +10000
+addTenTho = document.createElement('button');
+addTenTho.innerHTML += '+ 10K';
+addTenTho.classList.add('add-ten-tho');
+
+// +100000
+addHunTho = document.createElement('button');
+addHunTho.innerHTML += '+ 100K';
+addHunTho.classList.add('add-hun-tho');
+
+buttons.append(minus, plus, reset, addTen, addHun, addTho, addTenTho, addHunTho);
