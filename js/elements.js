@@ -67,4 +67,12 @@ addHunTho.innerHTML += '+ 100K';
 addHunTho.classList.add('add-hun-tho');
 
 buttons.append(minus, plus, reset, addTen, addHun, addTho, addTenTho, addHunTho);
-console.log(parseFloat(getComputedStyle(circle).height))
+
+// cerchi in movimento
+const outCircle = document.createElement('div');
+outCircle.classList.add('out-circle', 'd-flex', 'justify-content-center', 'align-items-start');
+container.append(outCircle);
+
+const inCircle = document.createElement('div');
+inCircle.classList.add('in-circle', 'd-flex', 'justify-content-center', 'align-items-top');
+container.append(inCircle);
