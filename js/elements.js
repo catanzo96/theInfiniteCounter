@@ -2,7 +2,7 @@
 // Titolo
 const title = document.createElement('div');
 title.classList.add('container-fluid', 'fixed-top', 'text-center');
-title.innerHTML += '<h1>The Infinite Counter</h1>';
+title.innerHTML += '<h1>THE INFINITE COUNTER</h1>';
 document.body.append(title);
 
 // Container Bootstrap
