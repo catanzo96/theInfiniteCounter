@@ -11,7 +11,7 @@ class Counter {
   // Funzione +1
   addOne() {
     const current = parseFloat(this.numberDisplay.innerText);
-    let newNumber = current + 500;
+    let newNumber = current + 1;
     this.numberDisplay.innerText = newNumber;
     this.moveIn();
     this.unlock();
