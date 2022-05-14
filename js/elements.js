@@ -11,18 +11,18 @@ container.classList.add('page','container-fluid','d-flex','justify-content-cente
 document.body.append(container);
 
 // Cerchio
-circle = document.createElement('div');
+const circle = document.createElement('div');
 circle.classList.add('circle','d-flex','justify-content-center','align-items-center');
 container.append(circle);
 
 // Numero
-number = document.createElement('div');
+const number = document.createElement('div');
 number.innerHTML += '0';
 number.classList.add('number','text-center');
 container.append(number);
 
 // Pulsanti:
-buttons = document.createElement('div');
+const buttons = document.createElement('div');
 buttons.classList.add('buttons','d-flex','justify-content-center','align-items-center');
 container.append(buttons);
 
@@ -42,29 +42,34 @@ reset.innerHTML += 'R';
 reset.classList.add('reset');
 
 // +10
-addTen = document.createElement('button');
+const addTen = document.createElement('button');
 addTen.innerHTML += '+ 10';
-addTen.classList.add('add-ten');
+addTen.classList.add('add-ten', 'locked');
+addTen.setAttribute('disabled', '');
 
 // +100
-addHun = document.createElement('button');
+const addHun = document.createElement('button');
 addHun.innerHTML += '+ 100';
-addHun.classList.add('add-hun');
+addHun.classList.add('add-hun', 'locked');
+addHun.setAttribute('disabled', '');
 
 // +1000
-addTho = document.createElement('button');
+const addTho = document.createElement('button');
 addTho.innerHTML += '+ 1K';
-addTho.classList.add('add-tho');
+addTho.classList.add('add-tho', 'locked');
+addTho.setAttribute('disabled', '');
 
 // +10000
-addTenTho = document.createElement('button');
+const addTenTho = document.createElement('button');
 addTenTho.innerHTML += '+ 10K';
-addTenTho.classList.add('add-ten-tho');
+addTenTho.classList.add('add-ten-tho', 'locked');
+addTenTho.setAttribute('disabled', '');
 
 // +100000
-addHunTho = document.createElement('button');
+const addHunTho = document.createElement('button');
 addHunTho.innerHTML += '+ 100K';
-addHunTho.classList.add('add-hun-tho');
+addHunTho.classList.add('add-hun-tho', 'locked');
+addHunTho.setAttribute('disabled', '');
 
 buttons.append(minus, plus, reset, addTen, addHun, addTho, addTenTho, addHunTho);
 
