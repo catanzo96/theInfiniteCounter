@@ -14,12 +14,6 @@ $ten-tho-color: #0009FF; $ten-tho-backg: #9296FF;
 $hun-tho-color: #0076FF; $hun-tho-backg: #96C7FF;
 
 $locked-color: #B2B2B2; $locked-backg: #EEEEEE;
-// Posizioni bottoni
-$minus-translate: translateX(-200px); $plus-translate: translateX(200px); $reset-translate: translate(-250px, 50px);
-$ten-translate: translate(-173px, 100px); $hun-translate: translate(-100px, 173px);
-$tho-translate: translateY(200px); $ten-tho-translate: translate(100px, 173px);
-$hun-tho-translate: translate(173px, 100px);
-
 
 * {
   box-sizing: border-box;
@@ -82,7 +76,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: $minus-translate;
+    transform: translateX(-200px);
   }
   .plus {
     color: $plus-minius-color;
@@ -91,7 +85,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: $plus-translate;
+    transform: translateX(200px);
   }
   .reset {
     font-size: 1em;
@@ -101,7 +95,7 @@ h1 {
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    transform: $reset-translate;
+    transform: translate(-250px, 50px);
   }
   .add-ten {
     font-size: 1em;
@@ -111,7 +105,7 @@ h1 {
     width: 45px;
     height: 45px;
     border-radius: 22.5px;
-    transform: $ten-translate;
+    transform: translate(-173px, 100px);
   }
   .add-hun {
     font-size: 1em;
@@ -121,7 +115,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: $hun-translate;
+    transform: translate(-100px, 173px);
   }
   .add-tho {
     font-size: 1em;
@@ -131,7 +125,7 @@ h1 {
     width: 55px;
     height: 55px;
     border-radius: 27.5px;
-    transform: $tho-translate;
+    transform: translateY(200px);
   }
   .add-ten-tho {
     font-size: 1em;
@@ -141,7 +135,7 @@ h1 {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    transform: $ten-tho-translate;
+    transform: translate(100px, 173px);
   }
   .add-hun-tho {
     font-size: 1em;
@@ -151,7 +145,7 @@ h1 {
     width: 70px;
     height: 70px;
     border-radius: 35px;
-    transform: $hun-tho-translate;
+    transform: translate(173px, 100px);
   }
 }
 
@@ -190,10 +184,12 @@ h1 {
   border: 4px solid $locked-color !important;
 }
 
+
 // Mobile
 @media only screen and (max-width: 480px) {
   h1 {
     font-size: 2em;
+    padding-top: 150px;
   }
   .number {
     font-size: 1.75em;
