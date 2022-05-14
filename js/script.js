@@ -62,27 +62,36 @@ class Counter {
     this.numberDisplay.innerText = newNumber;
     this.moveIn();
   };
-  // Funzione Dimensioni Cerchio
+  // Funzione Modifiche Cerchio
   circleSize() {
     let newDiameter;
     let currentNumber = parseFloat(this.numberDisplay.innerText);
 
     if (currentNumber < 1000) {
       newDiameter = this.diameter + (currentNumber / 5);
-    } else if (currentNumber >= 1000 && currentNumber < 10000) {
+      this.circle.style.backgroundColor = '#D6FF4C';
+    } else if (currentNumber >= 1_000 && currentNumber < 10_000) {
       newDiameter = this.diameter + (currentNumber / 50);
-    } else if (currentNumber >= 10000 && currentNumber < 100000) {
+      this.circle.style.backgroundColor = '#FFFA4C';
+    } else if (currentNumber >= 10_000 && currentNumber < 100_000) {
       newDiameter = this.diameter + (currentNumber / 500);
-    } else if (currentNumber >= 100000 && currentNumber < 1000000) {
+      this.circle.style.backgroundColor = '#FFD44C';
+    } else if (currentNumber >= 100_000 && currentNumber < 1_000_000) {
       newDiameter = this.diameter + (currentNumber / 5000);
+      this.circle.style.backgroundColor = '#FFAB4C';
+    } else if (currentNumber >= 1_000_000 && currentNumber < 10_000_000) {
+      newDiameter = this.diameter + (currentNumber / 50000);
+      this.circle.style.backgroundColor = '#FF7D4C';
     } else {
-      newDiameter = this.diameter + (currentNumber / 500000);
+      newDiameter = this.diameter + (currentNumber / 5000000);
+      this.circle.style.backgroundColor = '#FF4C4C'
     };
 
     this.circle.style.width = newDiameter + 'px';
     this.circle.style.height = newDiameter + 'px';
     this.circle.style.borderRadius = (newDiameter / 2) + 'px';
   };
+
   // Funzione cerchio out
   moveOut() {
     circleOut.classList.add('move-out');
