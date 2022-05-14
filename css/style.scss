@@ -14,6 +14,11 @@ $ten-tho-color: #0009FF; $ten-tho-backg: #9296FF;
 $hun-tho-color: #0076FF; $hun-tho-backg: #96C7FF;
 
 $locked-color: #B2B2B2; $locked-backg: #EEEEEE;
+// Posizioni bottoni
+$minus-translate: translateX(-200px); $plus-translate: translateX(200px); $reset-translate: translate(-250px, 50px);
+$ten-translate: translate(-173px, 100px); $hun-translate: translate(-100px, 173px);
+$tho-translate: translateY(200px); $ten-tho-translate: translate(100px, 173px);
+$hun-tho-translate: translate(173px, 100px);
 
 
 * {
@@ -77,7 +82,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: translateX(-200px);
+    transform: $minus-translate;
   }
   .plus {
     color: $plus-minius-color;
@@ -86,7 +91,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: translateX(200px);
+    transform: $plus-translate;
   }
   .reset {
     font-size: 1em;
@@ -96,7 +101,7 @@ h1 {
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    transform: translate(-250px, 50px);
+    transform: $reset-translate;
   }
   .add-ten {
     font-size: 1em;
@@ -106,7 +111,7 @@ h1 {
     width: 45px;
     height: 45px;
     border-radius: 22.5px;
-    transform: translate(-173px, 100px);
+    transform: $ten-translate;
   }
   .add-hun {
     font-size: 1em;
@@ -116,7 +121,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transform: translate(-100px, 173px);
+    transform: $hun-translate;
   }
   .add-tho {
     font-size: 1em;
@@ -126,7 +131,7 @@ h1 {
     width: 55px;
     height: 55px;
     border-radius: 27.5px;
-    transform: translateY(200px);
+    transform: $tho-translate;
   }
   .add-ten-tho {
     font-size: 1em;
@@ -136,7 +141,7 @@ h1 {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    transform: translate(100px, 173px);
+    transform: $ten-tho-translate;
   }
   .add-hun-tho {
     font-size: 1em;
@@ -146,7 +151,7 @@ h1 {
     width: 70px;
     height: 70px;
     border-radius: 35px;
-    transform: translate(173px, 100px);
+    transform: $hun-tho-translate;
   }
 }
 
@@ -175,7 +180,7 @@ h1 {
 }
 
 .move-in {
-  transform: translateY(+3vh);
+  transform: translateY(+3.5vh);
   transition: cubic-bezier(0,-0.01,.57,.57) 0.3s;
 }
 

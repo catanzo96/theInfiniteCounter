@@ -218,7 +218,3 @@ tenHundredButton.addEventListener('click', function() {
   counter.addHunTho();
   counter.circleMod();
 });
-
-if (numberDisplay.innerText > 10) {
-  console.log('ciao')
-}
