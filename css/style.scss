@@ -237,3 +237,10 @@ h1 {
     }
   }
 }
+
+@media screen and (orientation: landscape) {
+  h1 {
+    font-size: 2em;
+    padding-top: 100px;
+  }
+}
