@@ -185,7 +185,17 @@ h1 {
 
 
 // Mobile
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  html {
+   transform: rotate(-90deg);
+   transform-origin: left top;
+   width: 100vh;
+   overflow-x: hidden;
+   position: absolute;
+   top: 100%;
+   left: 0;
+  }
+
   h1 {
     font-size: 2em;
     padding-top: 100px;
@@ -235,12 +245,5 @@ h1 {
       border-radius: 30px;
       transform: translate(50px, 300px);
     }
-  }
-}
-
-
-@media (orientation: landscape) and (max-width: 777px) {
-  html {
-    transform: rotateZ(90deg);
   }
 }
